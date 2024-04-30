@@ -22,6 +22,11 @@ class RakutenSpider(scrapy.Spider):
 
     def parse(self, response):
         
+        categories=response.xpath('//span[@class="rbcomp__aside__menu__item__current"]/following-sibling::ul/li/a/@href').extract()
+        for category in categories:
+            print(category)
+            yield scrapy.Request(url=category, callback=self.parse)
+            # break
         
         divs=response.xpath('//div[@class="rbcomp__item-list__item"]')
       
