@@ -327,14 +327,5 @@
         "peekOfCode": "#HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'",
         "detail": "rakuten_books.rakuten_books.settings",
         "documentation": {}
-    },
-    {
-        "label": "RakutenSpider",
-        "kind": 6,
-        "importPath": "rakuten",
-        "description": "rakuten",
-        "peekOfCode": "class RakutenSpider(scrapy.Spider):\n    name = 'rakuten'\n    allowed_domains = ['books.rakuten.co.jp']\n    start_urls = ['http://books.rakuten.co.jp/']\n    def parse(self, response):\n        pass",
-        "detail": "rakuten",
-        "documentation": {}
     }
 ]
